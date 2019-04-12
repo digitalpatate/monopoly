@@ -2,13 +2,20 @@ package ch.heigvd.digitalpatate.monopoly;
 
 public class MGame {
 
+    private static final int MIN_PLAYER = 2;
+    private static final int MAX_PLAYER = 8;
+
     private int roundCount;
 
     private Board board;
     private Die[] dices;
     private Player[] players;
 
-    public MGame(int playerCount) {
+    public MGame(int playerCount) throws IllegalArgumentException {
+
+        if (playerCount < MIN_PLAYER || playerCount > MAX_PLAYER) {
+            throw new IllegalArgumentException("Player count should be between " + MIN_PLAYER + " and " + MAX_PLAYER);
+        }
 
         roundCount = 0;
 
@@ -32,7 +39,12 @@ public class MGame {
 
     }
 
+    public Player[] getPlayers() {
+        return players;
+    }
+
     public static void main(String[] args) {
-        new MGame(4);
+
+        MGame mGame = new MGame(1);
     }
 }
