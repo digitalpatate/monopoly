@@ -4,6 +4,9 @@ public class MGame {
 
     private static final int MIN_PLAYER = 2;
     private static final int MAX_PLAYER = 8;
+    private static final int ROUND_COUNT=20;
+    private static final int DIE_FACE_COUNT=6;
+
 
     private int roundCount;
 
@@ -22,7 +25,7 @@ public class MGame {
         board = new Board();
 
         dices = new Die[] {
-                new Die(6), new Die(6)
+                new Die(DIE_FACE_COUNT), new Die(DIE_FACE_COUNT)
         };
 
         players = new Player[playerCount];
@@ -33,7 +36,8 @@ public class MGame {
 
     public void playGame() {
 
-        while (roundCount<20){
+
+        while (roundCount<ROUND_COUNT){
             playRound();
         }
 
