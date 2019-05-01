@@ -8,10 +8,16 @@ public class Board {
 
         squares = new Square[40];
 
-        squares[0] = new Square("Go",0);
+        squares[0] = new GoSquare();
         for (int i = 1; i < squares.length; ++i) {
-            squares[i] = new Square("Square " + i,i);
+            squares[i] = new RegularSquare("Square " + i,i);
         }
+        squares[10]=new GoToJailSquare();
+        squares[30]=new RegularSquare("jail",30);
+        squares[2]=new IncomeTaxSquare(2);
+        squares[38]=new IncomeTaxSquare(38);
+
+
     }
 
 

@@ -1,6 +1,6 @@
 package ch.heigvd.digitalpatate.monopoly;
 
-public class Square {
+public abstract class Square {
 
     private String name;
     private int index;
@@ -14,5 +14,7 @@ public class Square {
         return name;
     }
     public int getIndex(){return index;}
+
+    public abstract void landedOn(Player p);
 
 }
