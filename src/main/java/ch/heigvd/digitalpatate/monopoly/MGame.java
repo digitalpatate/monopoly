@@ -4,6 +4,9 @@ public class MGame {
 
     private static final int MIN_PLAYER = 2;
     private static final int MAX_PLAYER = 8;
+    private static final int ROUND_COUNT=20;
+    private static final int DIE_FACE_COUNT=6;
+
 
     private int roundCount;
 
@@ -22,21 +25,34 @@ public class MGame {
         board = new Board();
 
         dices = new Die[] {
-                new Die(6), new Die(6)
+                new Die(DIE_FACE_COUNT), new Die(DIE_FACE_COUNT)
         };
 
         players = new Player[playerCount];
         for (int i = 0; i < players.length; i++) {
-            players[i] = new Player("Player" + (i + 1), dices, board);
+            players[i] = new Player("Player " + (i + 1), dices, board);
         }
     }
 
     public void playGame() {
 
+
+        while (roundCount<ROUND_COUNT){
+            playRound();
+        }
+
+
     }
 
     private void playRound() {
 
+            for(int i =0; i<players.length; ++i){
+
+                players[i].takeTurn();
+                System.out.println("--------");
+            }
+
+        roundCount++;
     }
 
     public Player[] getPlayers() {
@@ -45,6 +61,14 @@ public class MGame {
 
     public static void main(String[] args) {
 
-        MGame mGame = new MGame(1);
+        MGame mGame = new MGame(2);
+
+        mGame.playGame();
+
+
+
+
+
+
     }
 }

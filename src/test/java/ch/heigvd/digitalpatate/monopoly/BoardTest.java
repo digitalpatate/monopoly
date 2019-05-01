@@ -16,16 +16,16 @@ class BoardTest {
 
         Board board = new Board();
 
-        assertEquals(board.getSquare(0).getName(), name);
+        assertEquals(board.getSquareAt(0).getName(), name);
     }
 
     @RepeatedTest(value = 39, name = "Square {currentRepetition}")
     void otherSquaresAreNamedSquareID(RepetitionInfo repetitionInfo) {
 
-        String name = "Square" + repetitionInfo.getCurrentRepetition();
+        String name = "Square " + repetitionInfo.getCurrentRepetition();
 
         Board board = new Board();
 
-        assertEquals(board.getSquare(repetitionInfo.getCurrentRepetition()).getName(), name);
+        assertEquals(board.getSquareAt(repetitionInfo.getCurrentRepetition()).getName(), name);
     }
 }
