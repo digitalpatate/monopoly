@@ -27,16 +27,28 @@ public class MGame {
 
         players = new Player[playerCount];
         for (int i = 0; i < players.length; i++) {
-            players[i] = new Player("Player" + (i + 1), dices, board);
+            players[i] = new Player("Player " + (i + 1), dices, board);
         }
     }
 
     public void playGame() {
 
+        while (roundCount<20){
+            playRound();
+        }
+
+
     }
 
     private void playRound() {
 
+            for(int i =0; i<players.length; ++i){
+
+                players[i].takeTurn();
+                System.out.println("--------");
+            }
+
+        roundCount++;
     }
 
     public Player[] getPlayers() {
@@ -45,6 +57,14 @@ public class MGame {
 
     public static void main(String[] args) {
 
-        MGame mGame = new MGame(1);
+        MGame mGame = new MGame(2);
+
+        mGame.playGame();
+
+
+
+
+
+
     }
 }
