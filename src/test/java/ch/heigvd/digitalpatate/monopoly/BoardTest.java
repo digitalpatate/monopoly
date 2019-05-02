@@ -1,13 +1,19 @@
 package ch.heigvd.digitalpatate.monopoly;
 
-import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BoardTest {
+    static Board board;
+
+    @BeforeAll
+    static void init() {
+        board=new Board();
+    }
 
     @RepeatedTest(value = 40, name = "Square {currentRepetition}")
+    @DisplayName("Test Square names")
     void squaresAreNamedCorrectly(RepetitionInfo repetitionInfo) {
 
         int i = repetitionInfo.getCurrentRepetition()-1;
@@ -36,9 +42,11 @@ class BoardTest {
                 name = "Square " + i;
         }
 
-        Board board = new Board();
-
 
         assertEquals(board.getSquareAt(i).getName(), name);
+
     }
+
+
+
 }
