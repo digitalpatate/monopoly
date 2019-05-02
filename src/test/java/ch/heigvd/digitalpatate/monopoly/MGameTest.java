@@ -36,5 +36,5 @@ class MGameTest {
         assertThrows(IllegalArgumentException.class, () -> new MGame(playerCount));
     }
 
-    //need to add test for round count (must be less than 20)
+
 }

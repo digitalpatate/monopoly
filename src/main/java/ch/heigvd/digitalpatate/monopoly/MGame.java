@@ -11,7 +11,8 @@ public class MGame {
     private int roundCount;
 
     private Board board;
-    private Die[] dices;
+    //private Die[] dices;
+    private Cup cup;
     private Player[] players;
 
     public MGame(int playerCount) throws IllegalArgumentException {
@@ -24,13 +25,12 @@ public class MGame {
 
         board = new Board();
 
-        dices = new Die[] {
-                new Die(DIE_FACE_COUNT), new Die(DIE_FACE_COUNT)
-        };
+        cup = new Cup(new Die(DIE_FACE_COUNT), new Die(DIE_FACE_COUNT));
+
 
         players = new Player[playerCount];
         for (int i = 0; i < players.length; i++) {
-            players[i] = new Player("Player " + (i + 1), dices, board);
+            players[i] = new Player("Player " + (i + 1), cup, board);
         }
     }
 

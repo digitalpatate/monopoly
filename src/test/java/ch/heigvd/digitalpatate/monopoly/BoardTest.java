@@ -2,30 +2,43 @@ package ch.heigvd.digitalpatate.monopoly;
 
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class BoardTest {
 
-    @Test
-    void theFirstSquareIsNamedGo() {
+    @RepeatedTest(value = 40, name = "Square {currentRepetition}")
+    void squaresAreNamedCorrectly(RepetitionInfo repetitionInfo) {
 
-        String name = "Go";
+        int i = repetitionInfo.getCurrentRepetition()-1;
+        String name;
+
+        switch (i) {
+
+            case 0:
+                name = "Go";
+                break;
+            case 10:
+                name = "GoToJail";
+                break;
+            case 2:
+                name = "Tax";
+                break;
+            case 38:
+                name = "Tax";
+                break;
+            case 30:
+                name = "Jail";
+                break;
+
+
+            default:
+                name = "Square " + i;
+        }
 
         Board board = new Board();
 
-        assertEquals(board.getSquareAt(0).getName(), name);
-    }
 
-    @RepeatedTest(value = 39, name = "Square {currentRepetition}")
-    void otherSquaresAreNamedSquareID(RepetitionInfo repetitionInfo) {
-
-        String name = "Square " + repetitionInfo.getCurrentRepetition();
-
-        Board board = new Board();
-
-        assertEquals(board.getSquareAt(repetitionInfo.getCurrentRepetition()).getName(), name);
+        assertEquals(board.getSquareAt(i).getName(), name);
     }
 }
