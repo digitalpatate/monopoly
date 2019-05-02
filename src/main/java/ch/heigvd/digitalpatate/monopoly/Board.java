@@ -13,7 +13,7 @@ public class Board {
             squares[i] = new RegularSquare("Square " + i,i);
         }
         squares[10]=new GoToJailSquare();
-        squares[30]=new RegularSquare("jail",30);
+        squares[30]=new RegularSquare("Jail",30);
         squares[2]=new IncomeTaxSquare(2);
         squares[38]=new IncomeTaxSquare(38);
 
