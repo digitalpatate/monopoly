@@ -1,12 +1,16 @@
 package ch.heigvd.digitalpatate.monopoly;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MGameTest {
 
     @Test
+    @DisplayName("Correct amount of players")
     void aNewMGameHasTheGivenNumberOfPlayer() {
 
         int playerCount = 4;
@@ -20,7 +24,8 @@ class MGameTest {
         }
     }
 
-    @Test()
+    @Test
+    @DisplayName("Lowest amount of players")
     void itCannotHaveLessThanTwoPlayers() {
 
         final int playerCount = 1;
@@ -28,13 +33,15 @@ class MGameTest {
         assertThrows(IllegalArgumentException.class, () -> new MGame(playerCount));
     }
 
-    @Test()
+    @Test
+    @DisplayName("Max amount of players")
     void itCannotHaveMoreThanHeightPlayers() {
 
         final int playerCount = 9;
 
         assertThrows(IllegalArgumentException.class, () -> new MGame(playerCount));
     }
+
 
 
 }
