@@ -19,8 +19,6 @@ public class Player {
     }
 
     public void takeTurn() {
-
-
         Square oldLocation = piece.getLocation();
 
         cup.roll();
@@ -40,6 +38,10 @@ public class Player {
     }
 
     public void addCash(int amount) {
+
+        if(amount <0 ){
+            throw new IllegalArgumentException("Amount should be positive");
+        }
         cash += amount;
     }
 
@@ -50,10 +52,16 @@ public class Player {
 
     public void reduceCash(int amount){
 
+        if(amount <0 ){
+            throw new IllegalArgumentException("Amount should be positive");
+        }
+        if((cash - amount)<0){
+            throw new RuntimeException("Amount should be positive");
+        }
         cash-=amount;
     }
 
-    public Piece getPiece(){
+    public Piece getPiece() {
         return piece;
     }
 }

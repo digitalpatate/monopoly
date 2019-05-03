@@ -1,23 +1,24 @@
 package ch.heigvd.digitalpatate.monopoly;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MGameTest {
 
+    private MGame mGame;
+
+    @BeforeEach
+    void init(){
+        this.mGame = new MGame(4);
+    }
+
     @Test
     @DisplayName("Correct amount of players")
     void aNewMGameHasTheGivenNumberOfPlayer() {
 
-        int playerCount = 4;
 
-        MGame mGame = new MGame(playerCount);
-
-        assertEquals(mGame.getPlayers().length, playerCount);
+        assertEquals(mGame.getPlayers().length, 4);
 
         for (Player player : mGame.getPlayers()) {
             assertNotNull(player);
