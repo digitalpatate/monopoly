@@ -1,4 +1,4 @@
-package ch.heigvd.digitalpatate.monopoly;
+package ch.heigvd.digitalpatate.monopoly.player;
 
 import ch.heigvd.digitalpatate.monopoly.board.square.GoSquare;
 import ch.heigvd.digitalpatate.monopoly.board.square.GoToJailSquare;
