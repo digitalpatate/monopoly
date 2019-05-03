@@ -1,5 +1,9 @@
 package ch.heigvd.digitalpatate.monopoly;
 
+import ch.heigvd.digitalpatate.monopoly.board.Board;
+import ch.heigvd.digitalpatate.monopoly.cup.Cup;
+import ch.heigvd.digitalpatate.monopoly.cup.Die;
+import ch.heigvd.digitalpatate.monopoly.player.Player;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

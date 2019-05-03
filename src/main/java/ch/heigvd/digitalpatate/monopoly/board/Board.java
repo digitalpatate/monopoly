@@ -1,4 +1,7 @@
-package ch.heigvd.digitalpatate.monopoly;
+package ch.heigvd.digitalpatate.monopoly.board;
+
+
+import ch.heigvd.digitalpatate.monopoly.board.square.*;
 
 public class Board {
 
@@ -22,7 +25,7 @@ public class Board {
 
 
 
-    Square getSquare(Square oldLocation ,int index) {
+    public Square getSquare(Square oldLocation, int index) {
 
         if (index < 0 || index >= squares.length) {
             return null;
@@ -31,7 +34,7 @@ public class Board {
         return squares[(oldLocation.getIndex()+index) % 40];
     }
 
-    Square getSquareAt(int index){
+    public Square getSquareAt(int index){
         if (index < 0 || index >= squares.length) {
             return null;
         }

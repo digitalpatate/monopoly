@@ -1,6 +1,6 @@
 package ch.heigvd.digitalpatate.monopoly;
 
-import org.junit.jupiter.api.BeforeEach;
+import ch.heigvd.digitalpatate.monopoly.cup.Die;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package ch.heigvd.digitalpatate.monopoly;
+package ch.heigvd.digitalpatate.monopoly.cup;
 
 public class Cup {
 

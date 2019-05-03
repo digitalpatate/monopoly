@@ -1,5 +1,9 @@
 package ch.heigvd.digitalpatate.monopoly;
 
+import ch.heigvd.digitalpatate.monopoly.board.square.GoSquare;
+import ch.heigvd.digitalpatate.monopoly.board.square.GoToJailSquare;
+import ch.heigvd.digitalpatate.monopoly.board.square.Square;
+import ch.heigvd.digitalpatate.monopoly.player.Piece;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,7 @@
 package ch.heigvd.digitalpatate.monopoly;
 
+import ch.heigvd.digitalpatate.monopoly.cup.Cup;
+import ch.heigvd.digitalpatate.monopoly.cup.Die;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CupTest {
     private PipedDice pipedDice;
     private Cup cup;
-    private class PipedDice extends Die{
+    private class PipedDice extends Die {
         private int pipedFaceValue;
         public PipedDice(int FACE_COUNT) {
             super(FACE_COUNT);

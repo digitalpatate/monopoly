@@ -1,4 +1,4 @@
-package ch.heigvd.digitalpatate.monopoly;
+package ch.heigvd.digitalpatate.monopoly.cup;
 
 import java.util.Random;
 

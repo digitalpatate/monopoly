@@ -1,4 +1,8 @@
-package ch.heigvd.digitalpatate.monopoly;
+package ch.heigvd.digitalpatate.monopoly.player;
+
+import ch.heigvd.digitalpatate.monopoly.board.Board;
+import ch.heigvd.digitalpatate.monopoly.board.square.Square;
+import ch.heigvd.digitalpatate.monopoly.cup.Cup;
 
 public class Player {
 
