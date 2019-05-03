@@ -1,4 +1,4 @@
-package ch.heigvd.digitalpatate.monopoly;
+package ch.heigvd.digitalpatate.monopoly.board;
 
 import ch.heigvd.digitalpatate.monopoly.board.Board;
 import org.junit.jupiter.api.*;
