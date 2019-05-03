@@ -1,8 +1,9 @@
 package ch.heigvd.digitalpatate.monopoly;
 
+import ch.heigvd.digitalpatate.monopoly.board.Board;
+import ch.heigvd.digitalpatate.monopoly.board.square.GoSquare;
+import ch.heigvd.digitalpatate.monopoly.player.Player;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class GoSquareTest {
 

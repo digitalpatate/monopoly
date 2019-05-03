@@ -1,4 +1,6 @@
-package ch.heigvd.digitalpatate.monopoly;
+package ch.heigvd.digitalpatate.monopoly.board.square;
+
+import ch.heigvd.digitalpatate.monopoly.player.Player;
 
 public class RegularSquare extends Square {
 

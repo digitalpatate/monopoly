@@ -1,5 +1,10 @@
 package ch.heigvd.digitalpatate.monopoly;
 
+import ch.heigvd.digitalpatate.monopoly.board.Board;
+import ch.heigvd.digitalpatate.monopoly.cup.Cup;
+import ch.heigvd.digitalpatate.monopoly.cup.Die;
+import ch.heigvd.digitalpatate.monopoly.player.Player;
+
 public class MGame {
 
     private static final int MIN_PLAYER = 2;

@@ -1,5 +1,6 @@
 package ch.heigvd.digitalpatate.monopoly;
 
+import ch.heigvd.digitalpatate.monopoly.board.Board;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
