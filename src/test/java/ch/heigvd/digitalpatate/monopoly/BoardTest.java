@@ -46,7 +46,9 @@ class BoardTest {
         assertEquals(board.getSquareAt(i).getName(), name);
 
     }
+    @Test
+    void getanInexistantSquareShouldReturnNull(){
 
-
-
+        assertNull(board.getSquareAt(42));
+    }
 }
